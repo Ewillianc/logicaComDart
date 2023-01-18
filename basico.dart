@@ -6,7 +6,7 @@ main() {
 
   print('Operadores Dart');
   
-  int n1, n2, m;
+  int n1, n2;
   
   print('Informe o primeiro numero: ');
    String? s = stdin.readLineSync();
