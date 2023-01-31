@@ -170,11 +170,19 @@ main() {
   print('será pago $numPortion no valor de $portion');*/
 
 
-// Estrutura condicionais
+// Estrutura condicionais par ou impar
+
+print('Digite um numero qualquer:');
+
+String? s = stdin.readLineSync();
+int numQual = int.parse(s!);
+
+if( numQual % 2 == 0){
+  print('O Número $numQual e Pár!');
+}else{
+  print('O Número $numQual e Impár!');
+}
 
 
- 
 
-
-  
 }
