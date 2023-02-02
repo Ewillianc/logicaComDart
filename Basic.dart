@@ -1,11 +1,13 @@
 // ignore_for_file: unused_local_variable
 
 // ignore: unused_import
+import 'dart:math' ;
 import 'dart:io';
 
 
+
 main() {
- /* print('Operadores Dart');
+  print('Operadores Dart');
   
   int n1, n2;
 
@@ -167,14 +169,14 @@ main() {
 
   var portion = (loan + ((loan * percentage)/100))/numPortion;
 
-  print('será pago $numPortion no valor de $portion');*/
+  print('será pago $numPortion no valor de $portion');
 
 
 // Estrutura condicionais par ou impar
 
 print('Digite um numero qualquer:');
 
-String? s = stdin.readLineSync();
+s = stdin.readLineSync();
 int numQual = int.parse(s!);
 
 if( numQual % 2 == 0){
@@ -184,5 +186,61 @@ if( numQual % 2 == 0){
 }
 
 
+
+//Calcular IMC
+
+stdout.write('Massa (KG): ');
+ s = stdin.readLineSync();
+double mass = double.parse(s!);
+
+stdout.write('Massa (KG): ');
+s = stdin.readLineSync();
+double  heigh = double.parse(s!);
+
+//import 'dart:math  // para elevar e necessario a biblioteca math
+double imc = mass/ pow(heigh, 2); // elevado ao quadrado.
+
+if(imc < 17){
+  print('Muito abaixo do peso.');
+}else if(imc >=17 && imc <= 18.5){
+  print('Abaxo do peso ideal');
+}else if(imc>=18.5 && imc < 25){
+  print('Peso ideal');
+}else if(imc >=25 && imc < 30){
+  print('Sobrepeso');
+}else if(imc >=30 && imc < 35){
+  print('Obesidade');
+}else if(imc >=35 && imc < 40){
+  print('Obesidade severa');
+}else{
+  print('Obesidade Morbida');
+}
+
+
+// escolha Caso ( Switch Case )
+
+print(' CRIANÇA ESPERANÇA ');
+print(' Muito obrigado por ajudar ');
+print(r'[1] para doar $10,00');// r transformas caracteres como $ em strings
+print('[2] para doar \$25,00');// \ faz o mesmo porem com apenas um caracter
+print(r'[3] para doar $50,00');
+print(r'[4] para doar outros valores');
+print(r'[5] para cancelar');
+
+s = stdin.readLineSync();
+String dig = s!;
+
+switch(dig){
+  case "1":{ print(r'$10,00');}
+  break;
+  case "2":{ print(r'$25,00');}
+  break;
+  case "3":{ print(r'$50,00');}
+  break;
+  case "4":{ print(r'Outros valores');}
+  break;
+  case "5":{ print(r'Cancelado');}
+  break;
+}
 
 }
